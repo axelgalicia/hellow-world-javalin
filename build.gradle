@@ -1,7 +1,19 @@
-group 'io.javalin'
+group 'com.arknot'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: "com.github.johnrengelman.shadow"
+
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "com.github.jengelman.gradle.plugins:shadow:5.0.0"
+  }
+}
 
 sourceCompatibility = 1.8
 
